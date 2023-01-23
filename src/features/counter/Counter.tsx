@@ -1,7 +1,7 @@
 import React from 'react'
 import type { RootState } from '../../app/store'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment, incrementByAmount } from './counterSlice'
+import { decrement, increment, incrementByAmount, resetCounter } from './counterSlice'
 
 export function Counter() {
   const count = useSelector((state: RootState) => state.counter.value)
@@ -28,6 +28,12 @@ export function Counter() {
           onClick={() => dispatch(incrementByAmount({value: 10, name: 'WoW!'}))}
         >
           Increment 10
+        </button>
+        <button
+        aria-label='Reset counter to initial value'
+        onClick={() => dispatch(resetCounter())}
+        >
+          Reset Counter
         </button>
       </div>
     </div>
