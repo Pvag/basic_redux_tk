@@ -1,7 +1,9 @@
+import { Counter } from './features/counter/Counter'
+
 function App() {
   return (
     <div>
-      <p>Still no UI for this project. Just check the code.</p>
+      <Counter />
     </div>
   )
 }
